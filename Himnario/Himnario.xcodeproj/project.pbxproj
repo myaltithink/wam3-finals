@@ -11,6 +11,7 @@
 		FAD768292C423EE20006FA94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD768282C423EE20006FA94 /* ContentView.swift */; };
 		FAD7682B2C423EE30006FA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD7682A2C423EE30006FA94 /* Assets.xcassets */; };
 		FAD7682F2C423EE30006FA94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD7682E2C423EE30006FA94 /* Preview Assets.xcassets */; };
+		FAD768362C4243D30006FA94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD768352C4243D30006FA94 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		FAD7682A2C423EE30006FA94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD7682C2C423EE30006FA94 /* Himnario.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Himnario.entitlements; sourceTree = "<group>"; };
 		FAD7682E2C423EE30006FA94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAD768352C4243D30006FA94 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				FAD7682A2C423EE30006FA94 /* Assets.xcassets */,
 				FAD7682C2C423EE30006FA94 /* Himnario.entitlements */,
 				FAD7682D2C423EE30006FA94 /* Preview Content */,
+				FAD768352C4243D30006FA94 /* SplashScreen.swift */,
 			);
 			path = Himnario;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD768362C4243D30006FA94 /* SplashScreen.swift in Sources */,
 				FAD768292C423EE20006FA94 /* ContentView.swift in Sources */,
 				FAD768272C423EE20006FA94 /* HimnarioApp.swift in Sources */,
 			);

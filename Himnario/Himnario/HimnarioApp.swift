@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct HimnarioApp: App {
+    @State var isActive: Bool = false
     var body: some Scene {
         WindowGroup {
             ContentView()
