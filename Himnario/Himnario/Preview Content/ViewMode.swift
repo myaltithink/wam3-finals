@@ -37,7 +37,7 @@ struct ViewMode: View {
                 Button {
                     showEdit.toggle()
                 } label: {
-                    Text("Edit")
+                    Text(Image(systemName: "square.and.pencil"))
                         .font(.headline)
                 }
 
