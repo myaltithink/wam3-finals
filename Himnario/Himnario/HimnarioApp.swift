@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct HimnarioApp: App {
@@ -13,6 +14,6 @@ struct HimnarioApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.modelContainer(for: SongModel.self)
     }
 }

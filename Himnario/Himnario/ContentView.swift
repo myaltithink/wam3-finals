@@ -12,10 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if self.isActive {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                SongListView()
             }else {
                 SplashScreen()
             }
