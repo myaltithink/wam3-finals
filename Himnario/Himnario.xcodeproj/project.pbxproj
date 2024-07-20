@@ -12,12 +12,13 @@
 		FAD7682B2C423EE30006FA94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD7682A2C423EE30006FA94 /* Assets.xcassets */; };
 		FAD7682F2C423EE30006FA94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD7682E2C423EE30006FA94 /* Preview Assets.xcassets */; };
 		FAD768362C4243D30006FA94 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD768352C4243D30006FA94 /* SplashScreen.swift */; };
-		FB22B9A02C4A23E200768588 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B99D2C4A23E200768588 /* SongViewModel.swift */; };
-		FB22B9A12C4A23E200768588 /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B99E2C4A23E200768588 /* SongModel.swift */; };
-		FB22B9A22C4A23E200768588 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B99F2C4A23E200768588 /* SongView.swift */; };
 		FB22B9A82C4A3C1600768588 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B9A72C4A3C1600768588 /* SongListView.swift */; };
 		FB22B9AA2C4A40D200768588 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B9A92C4A40D200768588 /* ActivityView.swift */; };
 		FB22B9AC2C4A591D00768588 /* ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB22B9AB2C4A591D00768588 /* ViewMode.swift */; };
+		FBB888B32C4B9EBE009B0B0B /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB888AF2C4B9EBE009B0B0B /* SongView.swift */; };
+		FBB888B42C4B9EBE009B0B0B /* SongListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB888B02C4B9EBE009B0B0B /* SongListing.swift */; };
+		FBB888B52C4B9EBE009B0B0B /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB888B12C4B9EBE009B0B0B /* SongViewModel.swift */; };
+		FBB888B62C4B9EBE009B0B0B /* SongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB888B22C4B9EBE009B0B0B /* SongModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +29,13 @@
 		FAD7682C2C423EE30006FA94 /* Himnario.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Himnario.entitlements; sourceTree = "<group>"; };
 		FAD7682E2C423EE30006FA94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAD768352C4243D30006FA94 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		FB22B99D2C4A23E200768588 /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongViewModel.swift; path = ../../../../../Downloads/SongViewModel.swift; sourceTree = "<group>"; };
-		FB22B99E2C4A23E200768588 /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongModel.swift; path = ../../../../../Downloads/SongModel.swift; sourceTree = "<group>"; };
-		FB22B99F2C4A23E200768588 /* SongView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongView.swift; path = ../../../../../Downloads/SongView.swift; sourceTree = "<group>"; };
 		FB22B9A72C4A3C1600768588 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		FB22B9A92C4A40D200768588 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		FB22B9AB2C4A591D00768588 /* ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMode.swift; sourceTree = "<group>"; };
+		FBB888AF2C4B9EBE009B0B0B /* SongView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		FBB888B02C4B9EBE009B0B0B /* SongListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListing.swift; sourceTree = "<group>"; };
+		FBB888B12C4B9EBE009B0B0B /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		FBB888B22C4B9EBE009B0B0B /* SongModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +75,10 @@
 				FAD7682C2C423EE30006FA94 /* Himnario.entitlements */,
 				FAD7682D2C423EE30006FA94 /* Preview Content */,
 				FAD768352C4243D30006FA94 /* SplashScreen.swift */,
-				FB22B99E2C4A23E200768588 /* SongModel.swift */,
-				FB22B99F2C4A23E200768588 /* SongView.swift */,
-				FB22B99D2C4A23E200768588 /* SongViewModel.swift */,
+				FBB888B02C4B9EBE009B0B0B /* SongListing.swift */,
+				FBB888B22C4B9EBE009B0B0B /* SongModel.swift */,
+				FBB888AF2C4B9EBE009B0B0B /* SongView.swift */,
+				FBB888B12C4B9EBE009B0B0B /* SongViewModel.swift */,
 			);
 			path = Himnario;
 			sourceTree = "<group>";
@@ -161,12 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB22B9AC2C4A591D00768588 /* ViewMode.swift in Sources */,
+				FBB888B52C4B9EBE009B0B0B /* SongViewModel.swift in Sources */,
 				FAD768362C4243D30006FA94 /* SplashScreen.swift in Sources */,
-				FB22B9A12C4A23E200768588 /* SongModel.swift in Sources */,
-				FB22B9A02C4A23E200768588 /* SongViewModel.swift in Sources */,
-				FB22B9A22C4A23E200768588 /* SongView.swift in Sources */,
+				FBB888B62C4B9EBE009B0B0B /* SongModel.swift in Sources */,
+				FBB888B42C4B9EBE009B0B0B /* SongListing.swift in Sources */,
 				FAD768292C423EE20006FA94 /* ContentView.swift in Sources */,
 				FB22B9AA2C4A40D200768588 /* ActivityView.swift in Sources */,
+				FBB888B32C4B9EBE009B0B0B /* SongView.swift in Sources */,
 				FB22B9A82C4A3C1600768588 /* SongListView.swift in Sources */,
 				FAD768272C423EE20006FA94 /* HimnarioApp.swift in Sources */,
 			);
