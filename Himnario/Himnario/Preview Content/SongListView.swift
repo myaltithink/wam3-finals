@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 
-var selectedSong: SongModel = SongModel(code: "", title: "", lyrics: "")
+var selectedSong: SongModel = SongModel(code: "", title: "", lyrics: "", isFavorite: false)
 struct SongListView: View {
     @Environment(\.modelContext) private var modelContext
     @Query var songs: [SongModel]
@@ -36,13 +36,22 @@ struct SongListView: View {
                             BasicTextImageRow(song: listItems[index])
                         }
                         .swipeActions(edge: .leading) {
+//                            Button {
+//                                openEdit.toggle()
+//                                selectedSong = listItems[index]
+//                            } label: {
+//                                Text("Edit")
+//                            }
+//                            .tint(Color.green)
+//                            
                             Button {
-                                openEdit.toggle()
-                                selectedSong = listItems[index]
+                                listItems[index].isFavorite.toggle()
                             } label: {
-                                Text("Edit")
+                                Text(listItems[index].isFavorite ? "Remove from favorites" : "Add to favorites")
+                                Image(systemName: listItems[index].isFavorite ? "bookmark" : "bookmark.fill")
                             }
-                            .tint(Color.green)
+                            .tint(Color(red: 220/255, green: 181/255, blue: 76/255))
+
 
                         }
                     }
@@ -67,7 +76,7 @@ struct SongListView: View {
             }
         }.tint(.primary)
             .sheet(isPresented: $showNewSong) {
-                SongView(isEdit:false, songViewModel: SongModel(code: "", title: "", lyrics: ""))
+                SongView(isEdit:false, songViewModel: SongModel(code: "", title: "", lyrics: "", isFavorite: false))
             }
             .searchable(text: $searchText, isPresented: $isSearchActive, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Songs..")
             .onChange(of: searchText) { oldValue, newValue in
@@ -113,13 +122,27 @@ struct BasicTextImageRow: View {
         HStack(alignment: .top, spacing: 20) {
          
             VStack(alignment: .leading) {
+                HStack{
+                    Text(song.code)
+                        .foregroundColor(Color(red: 150/255, green: 46/255, blue: 37/255))
+                        .bold()
+                        .font(.system(size: 13, design: .rounded))
+                    Spacer()
+                    Image(systemName: !song.isFavorite ? "bookmark" : "bookmark.fill")
+                        .foregroundColor(Color(red: 220/255, green: 181/255, blue: 76/255))
+                }
                 Text(song.title)
                     .font(.system(.title2, design: .rounded))
+                    .bold()
                 
-                Text(song.code)
+                Text(song.lyrics)
                     .font(.system(.body, design: .rounded))
-
-            }
+                    .frame( height: 100, alignment: .top)
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
+                    .truncationMode(.tail)
+                    .foregroundColor(.gray)
+                    
+            }.padding()
             
 //            if song.isFavorite {
 //                Spacer()
@@ -137,7 +160,14 @@ struct BasicTextImageRow: View {
                     Image(systemName: "pencil")
                 }
             }
-            
+            Button(action: {
+                song.isFavorite.toggle()
+            }) {
+                HStack {
+                    Text(song.isFavorite ? "Remove from favorites" : "Add to favorites")
+                    Image(systemName: song.isFavorite ? "bookmark" : "bookmark.fill")
+                }
+            }
 //            Button(action: {
 //                self.restaurant.isFavorite.toggle()
 //            }) {
@@ -157,7 +187,6 @@ struct BasicTextImageRow: View {
             }
         }
         .sheet(isPresented: $showEdit) {
-            
             SongView(isEdit:true, songViewModel: song)
         }
         .sheet(isPresented: $showOptions) {
@@ -166,6 +195,8 @@ struct BasicTextImageRow: View {
             
             ActivityView(activityItems: [defaultText])
         }
+        .background(Color(red: 248/255, green: 246/255, blue: 234/255))
+        .cornerRadius(10)
     }
 }
 #Preview {

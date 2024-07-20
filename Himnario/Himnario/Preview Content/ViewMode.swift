@@ -15,11 +15,10 @@ struct ViewMode: View {
         NavigationStack {
             ScrollView{
                 VStack{
-               
-                    Text(song.lyrics)
+                    Text(song.lyrics).frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
                 }
             }
-        }
+        }.background(Color(red: 248/255, green: 246/255, blue: 234/255))
         .navigationTitle(song.title)
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -40,7 +39,7 @@ struct ViewMode: View {
                     Text(Image(systemName: "square.and.pencil"))
                         .font(.headline)
                 }
-
+                
             }
         }.sheet(isPresented: $showEdit, content: {
             SongView(isEdit: true, songViewModel: song)
